@@ -225,10 +225,10 @@ Only comprises the following:
 - [required] script: the command that calls the script
 */
 serve {
-    image = "continuumio/miniconda:latest"
+    image = "python:3.7"
     install = [
         "pip3 install --upgrade pip",
-        "pip3 install -r requirements-serve.txt",
+        "pip3 install -r requirements-pip-serve.txt",
     ]
     script = [
         {sh = [
