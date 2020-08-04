@@ -59,14 +59,14 @@ OUTPUT_MODEL_NAME = "/artefact/model_COVID_bdrk.h5"
 # pylint: disable=invalid-name
 app = Flask(__name__)
 
-def load_nn_model(self): 
+def load_nn_model(): 
         #loaded_model = tf.keras.models.load_model('model')
         # load json and create model
         loaded_model = models.load_model(OUTPUT_MODEL_NAME)
         # Pre-Covid:  models.load_model('model/model.h5', custom_objects={"weighted_mse": self.weighted_mse})
         return loaded_model
-        
-def model_predict(self, loaded_model, X_new):
+
+def model_predict(loaded_model, X_new):
         Y_pred = pd.DataFrame(loaded_model.predict(X_new))
         Y_pred[Y_pred<0] = 0
         Y_pred.columns = ['beyond_minus6.0H', 'minus6.0_to_5.75H', 'minus5.75_to_5.5H',
