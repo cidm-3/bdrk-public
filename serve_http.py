@@ -9,7 +9,7 @@ import numpy as np
 from bedrock_client.bedrock.metrics.service import ModelMonitoringService
 from flask import Flask, Response, current_app, request
 
-OUTPUT_MODEL_NAME = "/artefact/model_COVID_bdrk.h5"
+OUTPUT_MODEL_NAME = "/artefact/bdrk-model/model_COVID_bdrk.h5"
 
 
 # def predict_prob(subscriber_features,
