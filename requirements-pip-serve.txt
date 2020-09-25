@@ -2,7 +2,7 @@ bdrk[model-monitoring]==0.3.0
 numpy==1.18.1
 Flask==1.1.2
 gunicorn==20.0.4
-tensorflow==2.1.0
+tensorflow==2.1.2
 tensorflow-estimator==2.1.0
 h5py==2.10.0
 pandas==1.0.3
